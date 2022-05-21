@@ -1,9 +1,9 @@
-package domain.src.main.java.co.com.sofkau.hotel.cocina.commands;
+package co.com.sofkau.hotel.cocina.commands;
 
 import co.com.sofka.domain.generic.Command;
-import domain.src.main.java.co.com.sofkau.hotel.cocina.valuesCocina.Cantidad;
-import domain.src.main.java.co.com.sofkau.hotel.cocina.valuesCocina.CocinaId;
-import domain.src.main.java.co.com.sofkau.hotel.cocina.valuesCocina.PedidoId;
+import co.com.sofkau.hotel.cocina.valuesCocina.Cantidad;
+import co.com.sofkau.hotel.cocina.valuesCocina.CocinaId;
+import co.com.sofkau.hotel.cocina.valuesCocina.PedidoId;
 
 public class ModificarCantidadDePedido extends Command {
 

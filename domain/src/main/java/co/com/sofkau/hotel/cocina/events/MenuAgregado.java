@@ -1,9 +1,9 @@
-package domain.src.main.java.co.com.sofkau.hotel.cocina.events;
+package co.com.sofkau.hotel.cocina.events;
 
 import co.com.sofka.domain.generic.DomainEvent;
-import domain.src.main.java.co.com.sofkau.hotel.cocina.valuesCocina.MenuId;
-import domain.src.main.java.co.com.sofkau.hotel.values.Descripcion;
-import domain.src.main.java.co.com.sofkau.hotel.values.Nombre;
+import co.com.sofkau.hotel.cocina.valuesCocina.MenuId;
+import co.com.sofkau.hotel.values.Descripcion;
+import co.com.sofkau.hotel.values.Nombre;
 
 import java.util.UUID;
 

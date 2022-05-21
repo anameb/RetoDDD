@@ -1,13 +1,13 @@
-package domain.src.main.java.co.com.sofkau.hotel.cocina;
+package co.com.sofkau.hotel.cocina;
 
 import co.com.sofka.domain.generic.AggregateEvent;
-import domain.src.main.java.co.com.sofkau.hotel.cocina.events.CantidadPedidoModificada;
-import domain.src.main.java.co.com.sofkau.hotel.cocina.events.CocinaCreada;
-import domain.src.main.java.co.com.sofkau.hotel.cocina.events.ComentarioAlmacenado;
-import domain.src.main.java.co.com.sofkau.hotel.cocina.events.MenuAgregado;
-import domain.src.main.java.co.com.sofkau.hotel.cocina.valuesCocina.*;
-import domain.src.main.java.co.com.sofkau.hotel.values.Descripcion;
-import domain.src.main.java.co.com.sofkau.hotel.values.Nombre;
+import co.com.sofkau.hotel.cocina.events.CantidadPedidoModificada;
+import co.com.sofkau.hotel.cocina.events.CocinaCreada;
+import co.com.sofkau.hotel.cocina.events.ComentarioAlmacenado;
+import co.com.sofkau.hotel.cocina.events.MenuAgregado;
+import co.com.sofkau.hotel.cocina.valuesCocina.*;
+import co.com.sofkau.hotel.values.Descripcion;
+import co.com.sofkau.hotel.values.Nombre;
 
 
 public class Cocina extends AggregateEvent<CocinaId> {
@@ -21,9 +21,9 @@ public class Cocina extends AggregateEvent<CocinaId> {
     protected Calificacion calificacion;
 
 
-    public Cocina(CocinaId cocinaId, Tipo tipo, Menu menu, Pedido pedido, Calificacion calificacion) {
+    public Cocina(CocinaId cocinaId, Tipo tipo) {
         super(cocinaId);
-        appendChange(new CocinaCreada(tipo,menu, pedido, calificacion)).apply();
+        appendChange(new CocinaCreada(tipo)).apply();
         subscribe(new CocinaEventChange(this));
     }
 

@@ -1,8 +1,8 @@
-package domain.src.main.java.co.com.sofkau.hotel.reserva.events;
+package co.com.sofkau.hotel.reserva.events;
 
 import co.com.sofka.domain.generic.DomainEvent;
-import domain.src.main.java.co.com.sofkau.hotel.reserva.valuesReserva.HuespedId;
-import domain.src.main.java.co.com.sofkau.hotel.values.Telefono;
+import co.com.sofkau.hotel.reserva.valuesReserva.HuespedId;
+import co.com.sofkau.hotel.values.Telefono;
 
 import java.util.UUID;
 

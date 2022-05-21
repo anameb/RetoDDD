@@ -9,7 +9,6 @@ public class AgragarProductoProveedor extends Command {
 
     private final ProveedorId proveedorId;
     private  final Producto producto;
-
     private final AdministracionId administracionId;
 
     public AgragarProductoProveedor(ProveedorId proveedorId, Producto producto, AdministracionId administracionId) {

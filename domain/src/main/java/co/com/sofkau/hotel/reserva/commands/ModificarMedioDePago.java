@@ -1,9 +1,9 @@
-package domain.src.main.java.co.com.sofkau.hotel.reserva.commands;
+package co.com.sofkau.hotel.reserva.commands;
 
 import co.com.sofka.domain.generic.Command;
-import domain.src.main.java.co.com.sofkau.hotel.reserva.valuesReserva.MedioDePago;
-import domain.src.main.java.co.com.sofkau.hotel.reserva.valuesReserva.PagoId;
-import domain.src.main.java.co.com.sofkau.hotel.reserva.valuesReserva.ReservaId;
+import co.com.sofkau.hotel.reserva.valuesReserva.MedioDePago;
+import co.com.sofkau.hotel.reserva.valuesReserva.PagoId;
+import co.com.sofkau.hotel.reserva.valuesReserva.ReservaId;
 
 public class ModificarMedioDePago extends Command {
     private final PagoId pagoId;

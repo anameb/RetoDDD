@@ -1,11 +1,11 @@
-package domain.src.main.java.co.com.sofkau.hotel.cocina.commands;
+package co.com.sofkau.hotel.cocina.commands;
 
 import co.com.sofka.domain.generic.Command;
-import domain.src.main.java.co.com.sofkau.hotel.cocina.Calificacion;
-import domain.src.main.java.co.com.sofkau.hotel.cocina.Menu;
-import domain.src.main.java.co.com.sofkau.hotel.cocina.Pedido;
-import domain.src.main.java.co.com.sofkau.hotel.cocina.valuesCocina.CocinaId;
-import domain.src.main.java.co.com.sofkau.hotel.cocina.valuesCocina.Tipo;
+import co.com.sofkau.hotel.cocina.Calificacion;
+import co.com.sofkau.hotel.cocina.Menu;
+import co.com.sofkau.hotel.cocina.Pedido;
+import co.com.sofkau.hotel.cocina.valuesCocina.CocinaId;
+import co.com.sofkau.hotel.cocina.valuesCocina.Tipo;
 
 public class CrearCocina extends Command {
 
@@ -13,18 +13,10 @@ public class CrearCocina extends Command {
 
     private final Tipo tipo;
 
-    private final Menu menu;
-
-    private final  Pedido pedido;
-
-    private final Calificacion calificacion;
-
-    public CrearCocina(CocinaId cocinaId, Tipo tipo, Menu menu, Pedido pedido, Calificacion calificacion) {
+    public CrearCocina(CocinaId cocinaId, Tipo tipo) {
         this.cocinaId = cocinaId;
         this.tipo = tipo;
-        this.menu = menu;
-        this.pedido = pedido;
-        this.calificacion = calificacion;
+
     }
 
     public CocinaId getCocinaId() {
@@ -35,15 +27,7 @@ public class CrearCocina extends Command {
         return tipo;
     }
 
-    public Menu getMenu() {
-        return menu;
-    }
-
-    public Pedido getPedido() {
-        return pedido;
-    }
-
-    public Calificacion getCalificacion() {
-        return calificacion;
-    }
 }
+
+
+

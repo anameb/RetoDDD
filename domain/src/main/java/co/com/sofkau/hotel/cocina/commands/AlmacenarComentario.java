@@ -1,9 +1,9 @@
-package domain.src.main.java.co.com.sofkau.hotel.cocina.commands;
+package co.com.sofkau.hotel.cocina.commands;
 
 import co.com.sofka.domain.generic.Command;
-import domain.src.main.java.co.com.sofkau.hotel.cocina.valuesCocina.CalificacionId;
-import domain.src.main.java.co.com.sofkau.hotel.cocina.valuesCocina.CocinaId;
-import domain.src.main.java.co.com.sofkau.hotel.cocina.valuesCocina.Comentario;
+import co.com.sofkau.hotel.cocina.valuesCocina.CalificacionId;
+import co.com.sofkau.hotel.cocina.valuesCocina.CocinaId;
+import co.com.sofkau.hotel.cocina.valuesCocina.Comentario;
 
 public class AlmacenarComentario  extends Command {
 

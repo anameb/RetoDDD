@@ -1,9 +1,9 @@
-package domain.src.main.java.co.com.sofkau.hotel.reserva.commands;
+package co.com.sofkau.hotel.reserva.commands;
 
 import co.com.sofka.domain.generic.Command;
-import domain.src.main.java.co.com.sofkau.hotel.reserva.valuesReserva.ReservaId;
-import domain.src.main.java.co.com.sofkau.hotel.values.Descripcion;
-import domain.src.main.java.co.com.sofkau.hotel.values.Total;
+import co.com.sofkau.hotel.reserva.valuesReserva.ReservaId;
+import co.com.sofkau.hotel.values.Descripcion;
+import co.com.sofkau.hotel.values.Total;
 
 public class AgragarHabitacion extends Command {
 

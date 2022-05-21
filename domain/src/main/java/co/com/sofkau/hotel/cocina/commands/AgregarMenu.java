@@ -1,9 +1,9 @@
-package domain.src.main.java.co.com.sofkau.hotel.cocina.commands;
+package co.com.sofkau.hotel.cocina.commands;
 
 import co.com.sofka.domain.generic.Command;
-import domain.src.main.java.co.com.sofkau.hotel.cocina.valuesCocina.CocinaId;
-import domain.src.main.java.co.com.sofkau.hotel.values.Descripcion;
-import domain.src.main.java.co.com.sofkau.hotel.values.Nombre;
+import co.com.sofkau.hotel.cocina.valuesCocina.CocinaId;
+import co.com.sofkau.hotel.values.Descripcion;
+import co.com.sofkau.hotel.values.Nombre;
 
 public class AgregarMenu extends Command {
     private final CocinaId cocinaId;

@@ -1,4 +1,4 @@
-package domain.src.main.java.co.com.sofkau.hotel.cocina.valuesCocina;
+package co.com.sofkau.hotel.cocina.valuesCocina;
 
 import co.com.sofka.domain.generic.Identity;
 

@@ -7,7 +7,6 @@ import co.com.sofkau.hotel.administracion.valuesAdmi.ProveedorId;
 import co.com.sofkau.hotel.values.Nombre;
 
 public class Proveedor extends Entity<ProveedorId> {
-    protected Nombre nombre;
     protected Producto producto;
 
     public Proveedor(ProveedorId proveedorId, Producto producto) {
@@ -17,5 +16,9 @@ public class Proveedor extends Entity<ProveedorId> {
 
     public void agregarProducto(Producto producto){
             this.producto = producto;
+    }
+
+    public Producto producto (){
+        return producto;
     }
 }

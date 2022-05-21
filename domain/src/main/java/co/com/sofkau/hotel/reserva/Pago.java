@@ -1,9 +1,9 @@
-package domain.src.main.java.co.com.sofkau.hotel.reserva;
+package co.com.sofkau.hotel.reserva;
 
 import co.com.sofka.domain.generic.Entity;
-import domain.src.main.java.co.com.sofkau.hotel.reserva.valuesReserva.MedioDePago;
-import domain.src.main.java.co.com.sofkau.hotel.reserva.valuesReserva.PagoId;
-import domain.src.main.java.co.com.sofkau.hotel.values.Total;
+import co.com.sofkau.hotel.reserva.valuesReserva.MedioDePago;
+import co.com.sofkau.hotel.reserva.valuesReserva.PagoId;
+import co.com.sofkau.hotel.values.Total;
 
 public class Pago extends Entity<PagoId> {
     protected MedioDePago medioDePago;

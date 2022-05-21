@@ -10,9 +10,12 @@ public class Empleado extends Entity<EmpleadoId> {
    protected Nombre nombre;
    protected Telefono telefono;
 
+
+
     public Empleado(EmpleadoId entityId) {
         super(entityId);
     }
+
 
     public Empleado(EmpleadoId empleadoId, Nombre nombre, Telefono telefono) {
         super(empleadoId);

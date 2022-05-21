@@ -1,8 +1,8 @@
-package domain.src.main.java.co.com.sofkau.hotel.cocina.events;
+package co.com.sofkau.hotel.cocina.events;
 
 import co.com.sofka.domain.generic.DomainEvent;
-import domain.src.main.java.co.com.sofkau.hotel.cocina.valuesCocina.Cantidad;
-import domain.src.main.java.co.com.sofkau.hotel.cocina.valuesCocina.PedidoId;
+import co.com.sofkau.hotel.cocina.valuesCocina.Cantidad;
+import co.com.sofkau.hotel.cocina.valuesCocina.PedidoId;
 
 public class CantidadPedidoModificada extends DomainEvent {
     private final PedidoId pedidoId;

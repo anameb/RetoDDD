@@ -1,8 +1,8 @@
-package domain.src.main.java.co.com.sofkau.hotel.cocina.events;
+package co.com.sofkau.hotel.cocina.events;
 
 import co.com.sofka.domain.generic.DomainEvent;
-import domain.src.main.java.co.com.sofkau.hotel.cocina.valuesCocina.CalificacionId;
-import domain.src.main.java.co.com.sofkau.hotel.cocina.valuesCocina.Comentario;
+import co.com.sofkau.hotel.cocina.valuesCocina.CalificacionId;
+import co.com.sofkau.hotel.cocina.valuesCocina.Comentario;
 
 public class ComentarioAlmacenado extends DomainEvent {
 

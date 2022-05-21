@@ -1,9 +1,9 @@
-package domain.src.main.java.co.com.sofkau.hotel.reserva.events;
+package co.com.sofkau.hotel.reserva.events;
 
 import co.com.sofka.domain.generic.DomainEvent;
-import domain.src.main.java.co.com.sofkau.hotel.reserva.valuesReserva.HabitacionId;
-import domain.src.main.java.co.com.sofkau.hotel.values.Descripcion;
-import domain.src.main.java.co.com.sofkau.hotel.values.Total;
+import co.com.sofkau.hotel.reserva.valuesReserva.HabitacionId;
+import co.com.sofkau.hotel.values.Descripcion;
+import co.com.sofkau.hotel.values.Total;
 
 public class HabitacionAgregada extends DomainEvent {
 

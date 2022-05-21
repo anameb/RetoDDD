@@ -1,14 +1,14 @@
-package domain.src.main.java.co.com.sofkau.hotel.reserva;
+package co.com.sofkau.hotel.reserva;
 
 import co.com.sofka.domain.generic.AggregateEvent;
-import domain.src.main.java.co.com.sofkau.hotel.reserva.events.HabitacionAgregada;
-import domain.src.main.java.co.com.sofkau.hotel.reserva.events.MedioDePagoModificado;
-import domain.src.main.java.co.com.sofkau.hotel.reserva.events.ReservaCreada;
-import domain.src.main.java.co.com.sofkau.hotel.reserva.events.TelefonoHuespedCambiado;
-import domain.src.main.java.co.com.sofkau.hotel.reserva.valuesReserva.*;
-import domain.src.main.java.co.com.sofkau.hotel.values.Descripcion;
-import domain.src.main.java.co.com.sofkau.hotel.values.Telefono;
-import domain.src.main.java.co.com.sofkau.hotel.values.Total;
+import co.com.sofkau.hotel.reserva.events.HabitacionAgregada;
+import co.com.sofkau.hotel.reserva.events.MedioDePagoModificado;
+import co.com.sofkau.hotel.reserva.events.ReservaCreada;
+import co.com.sofkau.hotel.reserva.events.TelefonoHuespedCambiado;
+import co.com.sofkau.hotel.reserva.valuesReserva.*;
+import co.com.sofkau.hotel.values.Descripcion;
+import co.com.sofkau.hotel.values.Telefono;
+import co.com.sofkau.hotel.values.Total;
 
 public class Reserva extends AggregateEvent<ReservaId> {
 
@@ -22,9 +22,9 @@ public class Reserva extends AggregateEvent<ReservaId> {
 
     protected Habitacion habitacion;
 
-    public Reserva(ReservaId reservaId, FechaIngreso fechaIngreso, Fecha fecha, Pago pago, Huesped huesped, Habitacion habitacion) {
+    public Reserva(ReservaId reservaId, FechaIngreso fechaIngreso, Fecha fecha) {
         super(reservaId);
-        appendChange(new ReservaCreada(fechaIngreso,fecha, pago, huesped, habitacion)).apply();
+        appendChange(new ReservaCreada(fechaIngreso,fecha)).apply();
         subscribe(new ReservaEventChange(this));
     }
 

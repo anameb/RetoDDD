@@ -1,8 +1,8 @@
-package domain.src.main.java.co.com.sofkau.hotel.cocina;
+package co.com.sofkau.hotel.cocina;
 
 import co.com.sofka.domain.generic.Entity;
-import domain.src.main.java.co.com.sofkau.hotel.cocina.valuesCocina.Cantidad;
-import domain.src.main.java.co.com.sofkau.hotel.cocina.valuesCocina.PedidoId;
+import co.com.sofkau.hotel.cocina.valuesCocina.Cantidad;
+import co.com.sofkau.hotel.cocina.valuesCocina.PedidoId;
 
 public class Pedido  extends Entity<PedidoId> {
     protected Cantidad cantidad;

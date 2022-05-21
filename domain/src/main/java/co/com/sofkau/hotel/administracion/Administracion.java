@@ -12,7 +12,9 @@ import co.com.sofkau.hotel.administracion.valuesAdmi.*;
 import co.com.sofkau.hotel.values.Telefono;
 
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
+import java.util.function.Supplier;
 
 public class Administracion extends AggregateEvent<AdministracionId> {
 
@@ -25,13 +27,18 @@ public class Administracion extends AggregateEvent<AdministracionId> {
     protected Set<Proveedor> proveedors;
 
 
-    public Administracion(AdministracionId administracionId, Telefono telefono) {
-        super(administracionId);
-        appendChange(new AdministracionCreada(telefono)).apply();
+    public void crearAdministracion(AdministracionId administracionId,Telefono telefono) {
+        appendChange(new AdministracionCreada(administracionId, telefono)).apply();
         subscribe(new AdministracionEventChange(this));
     }
 
-    private Administracion(AdministracionId administracionId) {
+    public Administracion(AdministracionId administracionId, Telefono telefono) {
+        super(administracionId);
+        appendChange(new AdministracionCreada(administracionId, telefono)).apply();
+        subscribe(new AdministracionEventChange(this));
+    }
+
+    private Administracion(AdministracionId administracionId){
         super(administracionId);
         subscribe(new AdministracionEventChange(this));
     }
@@ -42,11 +49,11 @@ public class Administracion extends AggregateEvent<AdministracionId> {
         return administracion;
     }
 
-    public void CambiarTelefonoEmpleado(EmpleadoId empleadoId, Telefono telefono) {
+    public void cambiarTelefonoEmpleado(EmpleadoId empleadoId, Telefono telefono) {
         appendChange(new TelefonoEmpleadoCambiado(empleadoId, telefono)).apply();
     }
 
-    public void AgragarProductoProveedor(Producto producto) {
+    public void agragarProductoProveedor(Producto producto) {
         var proveedorId = new ProveedorId();
         appendChange(new ProductoProveedorAgregado(proveedorId, producto)).apply();
     }
@@ -60,4 +67,7 @@ public class Administracion extends AggregateEvent<AdministracionId> {
         return telefono;
     }
 
+    public List<Proveedor> proveedors(){
+        return (List<Proveedor>) proveedors;
+    }
 }

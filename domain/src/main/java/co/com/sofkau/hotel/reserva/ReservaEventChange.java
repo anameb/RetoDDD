@@ -1,14 +1,13 @@
-package domain.src.main.java.co.com.sofkau.hotel.reserva;
+package co.com.sofkau.hotel.reserva;
 
 import co.com.sofka.domain.generic.EventChange;
-import domain.src.main.java.co.com.sofkau.hotel.administracion.Externo;
-import domain.src.main.java.co.com.sofkau.hotel.administracion.valuesAdmi.Servicio;
-import domain.src.main.java.co.com.sofkau.hotel.reserva.events.HabitacionAgregada;
-import domain.src.main.java.co.com.sofkau.hotel.reserva.events.MedioDePagoModificado;
-import domain.src.main.java.co.com.sofkau.hotel.reserva.events.ReservaCreada;
-import domain.src.main.java.co.com.sofkau.hotel.reserva.events.TelefonoHuespedCambiado;
-import domain.src.main.java.co.com.sofkau.hotel.reserva.valuesReserva.MedioDePago;
-import domain.src.main.java.co.com.sofkau.hotel.values.Descripcion;
+
+import co.com.sofkau.hotel.reserva.events.HabitacionAgregada;
+import co.com.sofkau.hotel.reserva.events.MedioDePagoModificado;
+import co.com.sofkau.hotel.reserva.events.ReservaCreada;
+import co.com.sofkau.hotel.reserva.events.TelefonoHuespedCambiado;
+import co.com.sofkau.hotel.reserva.valuesReserva.MedioDePago;
+
 
 import java.util.Set;
 
@@ -17,9 +16,6 @@ public class ReservaEventChange extends EventChange {
         apply((ReservaCreada event) -> {
             reserva.fechaIngreso = event.getFechaIngreso();
             reserva.fecha = event.getFecha();
-            reserva.pago = event.getPago();
-            reserva.huesped = event.getHuesped();
-            reserva.habitacion = event.getHabitacion();
         });
 
         apply((MedioDePagoModificado event ) -> {

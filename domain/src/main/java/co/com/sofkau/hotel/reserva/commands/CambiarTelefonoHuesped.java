@@ -1,9 +1,9 @@
-package domain.src.main.java.co.com.sofkau.hotel.reserva.commands;
+package co.com.sofkau.hotel.reserva.commands;
 
 import co.com.sofka.domain.generic.Command;
-import domain.src.main.java.co.com.sofkau.hotel.reserva.valuesReserva.HuespedId;
-import domain.src.main.java.co.com.sofkau.hotel.reserva.valuesReserva.ReservaId;
-import domain.src.main.java.co.com.sofkau.hotel.values.Telefono;
+import co.com.sofkau.hotel.reserva.valuesReserva.HuespedId;
+import co.com.sofkau.hotel.reserva.valuesReserva.ReservaId;
+import co.com.sofkau.hotel.values.Telefono;
 
 public class CambiarTelefonoHuesped extends Command {
 
