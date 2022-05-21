@@ -1,6 +1,7 @@
 package co.com.sofkau.hotel.cocina;
 
 import co.com.sofka.domain.generic.AggregateEvent;
+import co.com.sofka.domain.generic.DomainEvent;
 import co.com.sofkau.hotel.cocina.events.CantidadPedidoModificada;
 import co.com.sofkau.hotel.cocina.events.CocinaCreada;
 import co.com.sofkau.hotel.cocina.events.ComentarioAlmacenado;
@@ -8,6 +9,8 @@ import co.com.sofkau.hotel.cocina.events.MenuAgregado;
 import co.com.sofkau.hotel.cocina.valuesCocina.*;
 import co.com.sofkau.hotel.values.Descripcion;
 import co.com.sofkau.hotel.values.Nombre;
+
+import java.util.List;
 
 
 public class Cocina extends AggregateEvent<CocinaId> {
@@ -30,6 +33,12 @@ public class Cocina extends AggregateEvent<CocinaId> {
     private Cocina(CocinaId cocinaId) {
         super(cocinaId);
         subscribe(new CocinaEventChange(this));
+    }
+
+    public static Cocina from(CocinaId cocinaId, List<DomainEvent> events){
+        var cocina = new Cocina(cocinaId);
+        events.forEach(cocina::applyEvent);
+        return cocina;
     }
 
     public void AgregarMenu(Nombre nombre, Descripcion descripcion) {

@@ -1,6 +1,7 @@
 package co.com.sofkau.hotel.reserva;
 
 import co.com.sofka.domain.generic.AggregateEvent;
+import co.com.sofka.domain.generic.DomainEvent;
 import co.com.sofkau.hotel.reserva.events.HabitacionAgregada;
 import co.com.sofkau.hotel.reserva.events.MedioDePagoModificado;
 import co.com.sofkau.hotel.reserva.events.ReservaCreada;
@@ -9,6 +10,8 @@ import co.com.sofkau.hotel.reserva.valuesReserva.*;
 import co.com.sofkau.hotel.values.Descripcion;
 import co.com.sofkau.hotel.values.Telefono;
 import co.com.sofkau.hotel.values.Total;
+
+import java.util.List;
 
 public class Reserva extends AggregateEvent<ReservaId> {
 
@@ -31,6 +34,12 @@ public class Reserva extends AggregateEvent<ReservaId> {
     private Reserva(ReservaId reservaId) {
         super(reservaId);
         subscribe(new ReservaEventChange(this));
+    }
+
+    public static Reserva from(ReservaId reservaId, List<DomainEvent> events){
+        var reserva = new Reserva(reservaId);
+        events.forEach(reserva::applyEvent);
+        return reserva;
     }
 
     public void CambiarTelefonoHuesped(HuespedId huespedId, Telefono telefono){
