@@ -1,9 +1,10 @@
-package domain.src.main.java.co.com.sofkau.hotel.administracion.commands;
+package co.com.sofkau.hotel.administracion.commands;
 
 import co.com.sofka.domain.generic.Command;
-import domain.src.main.java.co.com.sofkau.hotel.administracion.valuesAdmi.AdministracionId;
-import domain.src.main.java.co.com.sofkau.hotel.administracion.valuesAdmi.EmpleadoId;
-import domain.src.main.java.co.com.sofkau.hotel.values.Telefono;
+import co.com.sofkau.hotel.administracion.valuesAdmi.AdministracionId;
+import co.com.sofkau.hotel.administracion.valuesAdmi.EmpleadoId;
+import co.com.sofkau.hotel.values.Telefono;
+
 
 public class CambiarTelefonoEmpleado extends Command {
         private final EmpleadoId empleadoId;

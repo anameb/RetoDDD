@@ -1,8 +1,10 @@
-package domain.src.main.java.co.com.sofkau.hotel.administracion;
+package co.com.sofkau.hotel.administracion;
+
+
 
 import co.com.sofka.domain.generic.Entity;
-import domain.src.main.java.co.com.sofkau.hotel.administracion.valuesAdmi.ExternoId;
-import domain.src.main.java.co.com.sofkau.hotel.administracion.valuesAdmi.Servicio;
+import co.com.sofkau.hotel.administracion.valuesAdmi.ExternoId;
+import co.com.sofkau.hotel.administracion.valuesAdmi.Servicio;
 
 import java.util.Set;
 

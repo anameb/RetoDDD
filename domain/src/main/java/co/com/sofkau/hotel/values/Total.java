@@ -1,4 +1,4 @@
-package domain.src.main.java.co.com.sofkau.hotel.values;
+package co.com.sofkau.hotel.values;
 
 import co.com.sofka.domain.generic.ValueObject;
 

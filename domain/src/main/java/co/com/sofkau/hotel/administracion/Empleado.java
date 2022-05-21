@@ -1,9 +1,10 @@
-package domain.src.main.java.co.com.sofkau.hotel.administracion;
+package co.com.sofkau.hotel.administracion;
 
 import co.com.sofka.domain.generic.Entity;
-import domain.src.main.java.co.com.sofkau.hotel.administracion.valuesAdmi.EmpleadoId;
-import domain.src.main.java.co.com.sofkau.hotel.values.Nombre;
-import domain.src.main.java.co.com.sofkau.hotel.values.Telefono;
+import co.com.sofkau.hotel.administracion.valuesAdmi.EmpleadoId;
+import co.com.sofkau.hotel.values.Nombre;
+import co.com.sofkau.hotel.values.Telefono;
+
 
 public class Empleado extends Entity<EmpleadoId> {
    protected Nombre nombre;

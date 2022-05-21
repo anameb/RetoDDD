@@ -1,8 +1,9 @@
-package domain.src.main.java.co.com.sofkau.hotel.administracion.events;
+package co.com.sofkau.hotel.administracion.events;
 
 import co.com.sofka.domain.generic.DomainEvent;
-import domain.src.main.java.co.com.sofkau.hotel.administracion.valuesAdmi.EmpleadoId;
-import domain.src.main.java.co.com.sofkau.hotel.values.Telefono;
+import co.com.sofkau.hotel.administracion.valuesAdmi.EmpleadoId;
+import co.com.sofkau.hotel.values.Telefono;
+
 
 public class TelefonoEmpleadoCambiado extends DomainEvent {
     private final EmpleadoId empleadoId;

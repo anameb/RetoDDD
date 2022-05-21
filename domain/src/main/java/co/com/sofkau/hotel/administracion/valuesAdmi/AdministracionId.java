@@ -1,4 +1,4 @@
-package domain.src.main.java.co.com.sofkau.hotel.administracion.valuesAdmi;
+package co.com.sofkau.hotel.administracion.valuesAdmi;
 
 import co.com.sofka.domain.generic.Identity;
 
