@@ -8,6 +8,8 @@ import co.com.sofkau.hotel.reserva.commands.ModificarMedioDePago;
 
 public class ModificarMedioDePagoUseCase extends UseCase<RequestCommand <ModificarMedioDePago>, ResponseEvents> {
     @Override
+
+
     public void executeUseCase(RequestCommand<ModificarMedioDePago> modificarMedioDePagoRequestCommand) {
         var command = modificarMedioDePagoRequestCommand.getCommand();
         var reserva = Reserva.from(command.getReservaId(),repository().getEventsBy(command.getReservaId().value()));

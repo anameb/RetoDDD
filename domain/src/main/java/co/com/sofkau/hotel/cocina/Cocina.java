@@ -26,7 +26,7 @@ public class Cocina extends AggregateEvent<CocinaId> {
 
     public Cocina(CocinaId cocinaId, Tipo tipo) {
         super(cocinaId);
-        appendChange(new CocinaCreada(tipo)).apply();
+        appendChange(new CocinaCreada(cocinaId, tipo)).apply();
         subscribe(new CocinaEventChange(this));
     }
 

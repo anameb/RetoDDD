@@ -12,12 +12,14 @@ public class MedioDePago implements ValueObject<String> {
         this.value = Objects.requireNonNull(value);
     }
 
+    public MedioDePago() {
+
+        value = "efectivo";
+    }
+
     @Override
     public String value() {
         return value;
     }
 
-    public MedioDePago() {
-        value = null;
-    }
 }

@@ -20,4 +20,8 @@ public class Huesped extends Entity<HuespedId> {
 
         this.telefono = telefono;
     }
+
+    public Huesped(HuespedId entityId) {
+        super(entityId);
+    }
 }

@@ -15,7 +15,9 @@ public class Pago extends Entity<PagoId> {
         this.total = total;
     }
 
-
+    public Pago(PagoId entityId) {
+        super(entityId);
+    }
 
     public void modificarMedioDePago(MedioDePago medioDePago){
         this.medioDePago = medioDePago;
